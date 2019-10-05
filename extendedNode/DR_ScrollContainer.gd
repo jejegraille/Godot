@@ -51,11 +51,11 @@ func _input(event):
 			
 			var x = event.position.x;
 			if sysX.last != null:
-				var delta = (sysX.last - y) * moveScale;
+				var delta = (sysX.last - x) * moveScale;
 				scroll_vertical += delta;
 				sysX.amp += delta;
 				sysX.ampCount += 1;
-			sysX.last = y;
+			sysX.last = x;
 
 func _process(delta):
 	var r = max(0, rigidity);
