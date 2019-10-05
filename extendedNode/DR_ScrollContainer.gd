@@ -44,6 +44,9 @@ func _input(event):
 			var y = event.position.y;
 			if sysY.last != null:
 				var delta = (sysY.last - y) * moveScale;
+				if sysY.ampCount > 0 && !isSameSign(delta, sysY.amp):
+					sysY.amp = 0;
+					sysY.ampCount = 0;
 				scroll_vertical += delta;
 				sysY.amp += delta;
 				sysY.ampCount += 1;
@@ -52,10 +55,16 @@ func _input(event):
 			var x = event.position.x;
 			if sysX.last != null:
 				var delta = (sysX.last - x) * moveScale;
-				scroll_vertical += delta;
+				scroll_horizontal += delta;
+				if sysX.ampCount > 0 && !isSameSign(delta, sysX.amp):
+					sysX.amp = 0;
+					sysX.ampCount = 0;
 				sysX.amp += delta;
 				sysX.ampCount += 1;
 			sysX.last = x;
+
+func isSameSign(a, b):
+	return ((a >= 0 && b >= 0) ||  (a <= 0 && b <= 0));
 
 func _process(delta):
 	var r = max(0, rigidity);
