@@ -1,7 +1,7 @@
-#DR_WebSprit 
+# DR_WebSprit 
 développé pour faciliter l'affichage d'images depuis une url http ou https
 
-##Usage :
+## Usage :
 Créer un node DR_WebSprite
 Ajouter l'url de l'image en parametre
 Ajouter les limites de la taille du sprite si necessaire
