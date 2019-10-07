@@ -1,5 +1,5 @@
 # DR_WebSprit 
-développé pour faciliter l'affichage d'images depuis une url http ou https
+Développé pour faciliter l'affichage d'images depuis une url http ou https
 
 ## Usage :
 Créer un node DR_WebSprite
