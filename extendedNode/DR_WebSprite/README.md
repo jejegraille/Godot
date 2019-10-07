@@ -2,10 +2,10 @@
 Développé pour faciliter l'affichage d'images depuis une url http ou https
 
 ## Usage :
-Créer un node DR_WebSprite
-Ajouter l'url de l'image en parametre
-Ajouter les limites de la taille du sprite si necessaire
-Ajouter une texture placeholder si necessaire
+- Créez un node DR_WebSprite
+- Ajoutez l'url de l'image en parametre
+- Ajoutez les limites de la taille du sprite si necessaire
+- Ajoutez une texture placeholder si necessaire
 
 signal onLoaded se déclanche quand l'image internet est affiché
 
