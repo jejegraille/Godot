@@ -1,4 +1,4 @@
-#DR_WebSprite
+#DR_WebSprite[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 développé pour faciliter l'affichage d'images depuis une url http ou https
 
 ##Usage :
