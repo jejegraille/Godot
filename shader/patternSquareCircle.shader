@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform float alpha = 0;
+uniform float alpha = 1;
 uniform float size = 1;
 uniform float speed = 1;
 uniform int detail = 1;
