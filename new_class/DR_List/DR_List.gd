@@ -1,13 +1,18 @@
 class_name DR_List
 
 var length = 0;
-var start : GB_ListElm = null;
-var lastListAdded : GB_ListElm = null;
+var start : DR_ListElm = null;
+var lastListAdded : DR_ListElm = null;
+
+var last setget, _getLastElement 
 
 func _init():
 	pass;
 
-func  addElemToList(elem : GB_ListElm, atStart: bool):
+func _getLastElement()->DR_ListElm:
+	return lastListAdded;
+	
+func  _addElemToList(elem :DR_ListElm, atStart: bool):
 	if atStart:
 		elem.next = self.start;
 		if self.start:
@@ -24,10 +29,20 @@ func  addElemToList(elem : GB_ListElm, atStart: bool):
 		elem.prev = self.lastListAdded;
 		self.lastListAdded = elem;
 		self.length += 1;
+	
+func isLooped():
+	if start && lastListAdded && start.prev == lastListAdded && lastListAdded.next == start:
+		return true;
+	else:
+		return false;
 
 func addToList(content, atStart : bool = false):
-	var elem = GB_ListElm.new(content);
-	self.addElemToList(elem, atStart);
+	var elem : DR_ListElm;
+	if content is DR_ListElm:
+		elem = content;
+	else:
+		elem = DR_ListElm.new(content);
+	self._addElemToList(elem, atStart);
 	return elem;
 
 func getListElemAt(indx):
@@ -44,8 +59,15 @@ func getContentAt(indx):
 		tmp = tmp.next;
 	return tmp.content;
 
+func getElementFromContent(content):
+	var tmp = self.start;
+	while tmp:
+		if tmp.content == content:
+			return tmp;
+		tmp = tmp.next;
+	return null;
 
-func invertElem(a:GB_ListElm, b:GB_ListElm):
+func invertElem(a:DR_ListElm, b:DR_ListElm):
 	var an = a.next;
 	var ap = a.prev;
 	var bn = b.next;
@@ -73,7 +95,12 @@ func invertElem(a:GB_ListElm, b:GB_ListElm):
 	b.next = an;
 	b.prev = ap;
 
-func removeFromList(elem:GB_ListElm):
+func removeFromList(content):
+	var elem;
+	if content is DR_ListElm:
+		elem = content;
+	else:
+		elem = getElementFromContent(content);
 	if elem == null:
 		return;
 	if elem == self.start:
