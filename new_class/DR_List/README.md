@@ -10,9 +10,9 @@ var list = DR_List.new();
 - Ajoutez du contenus à la liste
 ```
 list.addToList(content);
-```
-ou 
-```
+
+------------or------------------
+
 var elem = DR_ListElem.new(content);
 list.addToList(elem);
 ```
@@ -33,7 +33,7 @@ while tmp != null:
   list.removeFromList(tmp);
   tmp = tmp.next;
   
- or
+------------or------------------
  
  list.removeFromList(content);
 ```
