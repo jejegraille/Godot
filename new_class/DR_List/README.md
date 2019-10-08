@@ -37,7 +37,7 @@ while tmp != null:
  
  list.removeFromList(content);
 ```
--Obtenir l'element ou le contenus à l'index i:
+- Obtenir l'element ou le contenus à l'index i:
 ```
 var elem = list.getListElemAt(0);
 var content = list.getContentAt(0);
