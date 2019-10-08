@@ -1,4 +1,4 @@
-# Godot (from 3.1)
+# ADD-ON for Godot (from 3.1)
 Partage de mes travaux autour de Godot.
 
 Ce repo contient des nodes nouveaux, des extensions de nodes, ou des scripts qui ajoutent du contenus/fonctionnalité et/ou facilite l'utilisation de Godot.
