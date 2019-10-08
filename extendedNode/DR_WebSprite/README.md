@@ -1,4 +1,4 @@
-# DR_WebSprit 
+# DR_WebSprite 
 Développé pour faciliter l'affichage d'images depuis une url HTTP ou HTTPS
 
 ## Usage :
