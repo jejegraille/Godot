@@ -1,6 +1,6 @@
 extends Node;
 
-class_name DR_setTimeOut
+class_name DR_SetTimeOut
 
 var time : float;
 var callback : FuncRef;
