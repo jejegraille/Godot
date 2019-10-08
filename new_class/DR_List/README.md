@@ -46,6 +46,10 @@ var content = list.getContentAt(0);
 ```
 list.invertElem(elmA, elmB);
 ```
+- Savoir si la liste est bouclé:
+```
+list.isLooped();
+```
 
 ## Propriétés
 - list.start : Le premier élement de la list
