@@ -3,6 +3,7 @@ shader_type canvas_item;
 
 uniform float power : hint_range(0,1) = 0.3;
 uniform float vibrance : hint_range(0,1) = 1;
+uniform vec4 powerColor: hint_color = vec4(1,1,1,1);
 
 bool isBorder(float p, sampler2D texture_, vec2 uv, vec2 pixelSize){
 	float speed = 5.0 * p;
@@ -46,7 +47,7 @@ void fragment(){
 			colorTexture *= 2.0;
 			COLOR = colorTexture;
 		}else
-			COLOR = mix(texture(TEXTURE, uv2), vec4(1,1,1,colorTexture.a), speed / 5.0);
+			COLOR = mix(texture(TEXTURE, uv2), vec4(powerColor.r, powerColor.g, powerColor.b, colorTexture.a), 0.7 * speed / 5.0);
 	}
 	
 }
