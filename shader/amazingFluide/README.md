@@ -87,3 +87,26 @@ effectSize = 0.157;
 effectVariation = 1.203;
 ```
 
+## Matriciel
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/amazingFluide/preview/sensual.gif)
+- preset
+```
+alpha = 1;
+alphaB = 1;
+shine = 1;
+colorA = vec4(0,0,0,1);
+colorB = vec4(0,1,0,1);
+
+distordX = 0.64;
+distordY = 0;
+square = 0.9;
+
+size = 1.74;
+borderSize = 0.444;
+speed = 1.564;
+
+effectType = 0;
+effectSize = 0;
+effectVariation = 0;
+```
+
