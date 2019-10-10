@@ -64,3 +64,26 @@ effectType = 0;
 effectSize = 0;
 effectVariation = 0;
 ```
+## Matriciel
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/amazingFluide/preview/matriciel.gif)
+- preset
+```
+alpha = 1;
+alphaB = 1;
+shine = 0.42;
+colorA = vec4(0,0,0,1);
+colorB = vec4(0,1,0,1);
+
+distordX = 1.0;
+distordY = 1.0;
+square = 0.92;
+
+size = 1.99;
+borderSize = 0.31;
+speed = 0.7;
+
+effectType = 2;
+effectSize = 0.157;
+effectVariation = 1.203;
+```
+
