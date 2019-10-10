@@ -87,7 +87,7 @@ effectSize = 0.157;
 effectVariation = 1.203;
 ```
 
-## Matriciel
+## Sensual
 ![preview](https://github.com/jejegraille/Godot/blob/master/shader/amazingFluide/preview/sensual.gif)
 - preset
 ```
