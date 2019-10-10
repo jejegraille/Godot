@@ -1,4 +1,5 @@
-![perview](https://zupimages.net/up/19/41/wsgh.gif)
+![perview](https://ibb.co/PgM5xQh)
+
 ## parametre :
 - Power : puissance de 0 à 1
 - Vibrance : Intensité de vibration de 0 à 1
