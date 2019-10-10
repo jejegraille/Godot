@@ -42,3 +42,25 @@ effectType = 0;
 effectSize = 0.045;
 effectVariation = 0;
 ```
+## Organic
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/amazingFluide/preview/organic.gif)
+- preset
+```
+alpha = 1;
+alphaB = 0.7;
+shine = 0.08;
+colorA = vec4(1,0.55,1,1);
+colorB = vec4(1,1,1,1);
+
+distordX = 1.0;
+distordY = 1.0;
+square = 0.89;
+
+size = 1.82;
+borderSize = 2.0;
+speed = 1.6;
+
+effectType = 0;
+effectSize = 0;
+effectVariation = 0;
+```
