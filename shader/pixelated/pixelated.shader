@@ -1,11 +1,15 @@
 shader_type canvas_item;
 
-uniform float pixelSize : hint_range(1, 20) = 2;
+uniform float pixelSize : hint_range(1, 50) = 2;
+
+vec2 roundVec(vec2 v){
+	return vec2(floor(v.x + 0.5), floor(v.y + 0.5));
+}
 
 void fragment(){
-	vec2 size = pixelSize * TEXTURE_PIXEL_SIZE * 0.005;
-	vec2 newUV = (floor(vec2(0.5, 0.5) + (UV * TEXTURE_PIXEL_SIZE) / size) * size) / TEXTURE_PIXEL_SIZE;
-	COLOR = texture(TEXTURE, newUV);
+	vec2 uv = UV / TEXTURE_PIXEL_SIZE;
+	uv = roundVec(uv / pixelSize) * pixelSize;
+	COLOR = texture(TEXTURE, uv * TEXTURE_PIXEL_SIZE);
 //BETTER EFFECT WITH ALPHA TO 1 
 	if (COLOR.a > 0.5) 
 		COLOR.a = 1.0;
