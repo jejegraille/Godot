@@ -1,1 +1,1 @@
-![preview](https://github.com/jejegraille/Godot/new/master/shader/pixelated/pixelated.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/pixelated/pixelated.gif)
