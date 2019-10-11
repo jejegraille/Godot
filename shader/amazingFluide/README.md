@@ -8,16 +8,16 @@ shine = 0.07;
 colorA = vec4(0.1,0.52,0.9,1);
 colorB = vec4(1,1,1,1);
 
-distordX = 0.28;
-distordY = 0.32;
-square = 0.89;
+distordX = 0.152;
+distordY = 0.268;
+square = 0.648;
 
-size = 1.9;
-borderSize = 1.33;
+size = 1.73;
+borderSize = 1.343;
 speed = 0.4;
 
 effectType = 3;
-effectSize = 0.08;
+effectSize = 0.04;
 effectVariation = 0.127;
 ```
 ## redLine
