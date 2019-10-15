@@ -1,1 +1,1 @@
-![preview](https://github.com/jejegraille/Godot/new/master/shader/trickle/trickle.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/trickle/trickle.gif)
