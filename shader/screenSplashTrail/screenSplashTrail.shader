@@ -7,7 +7,7 @@ uniform float traceAlpha : hint_range(0,1) = 0.12;
 
 uniform vec4 traceColor : hint_color = vec4(1,1,1,1);
 
-uniform float alteration : hint_range(0,1) = 01;
+uniform float alteration : hint_range(0,1) = 0.1;
 
 
 vec4 findColor(float d, sampler2D texture_, vec2 pos, vec2 pixelSize){
