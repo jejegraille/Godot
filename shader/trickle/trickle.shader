@@ -2,16 +2,14 @@ shader_type canvas_item;
 
 
 uniform float progress : hint_range(0,1);
-uniform float trickleHeigth = 64;
-uniform float traceAlpha : hint_range(0,1) = 0.28;
+uniform float trickleHeigth = 100;
 
 uniform vec4 traceColor : hint_color = vec4(1,0,0,1);
 uniform bool useTextureForTrace = false;
 
-uniform float freqX1 : hint_range(0, 10) = 6.2;
-uniform float power1 : hint_range(0, 1) = 0.07;
-uniform float freqX2 : hint_range(0, 10) = 1;
-uniform float power2 : hint_range(0, 1) = 0.4;
+uniform float microFreqX : hint_range(0, 1) = 0.39;
+uniform float freqX : hint_range(0, 1) = 0.352;
+uniform float macroFreqX : hint_range(0, 1) = 1;
 
 
 
@@ -31,7 +29,6 @@ vec4 findColor(float d, sampler2D texture_, vec2 pos, float pixelSize){
 	if (maxI > 0.0){
 		delta.y = - maxI;
 		vec4 color = texture(texture_, (pos + delta) * pixelSize);	
-		color.a = traceAlpha * 0.2 + traceAlpha * 0.8 * (maxI / d);
 		return color;
 	}
 	return vec4(-1,0,0,0);
@@ -41,7 +38,14 @@ vec4 findColor(float d, sampler2D texture_, vec2 pos, float pixelSize){
 void fragment(){
 	vec2 pos = UV / TEXTURE_PIXEL_SIZE;
 	
-	float d = trickleHeigth + 30.0 * power1 * sin(pos.x * freqX1 * 0.1) + 30.0 * power2 * sin(pos.x * freqX2 * 0.1);
+	float d = trickleHeigth;
+	float r = max(0, sin(pos.x * microFreqX * 2.0) - 0.8) / 0.2;
+	r += max(0, sin(pos.x * freqX * 0.8) - 0.3) / 0.7;
+	r += sin(pos.x * macroFreqX * 0.08);
+	r = max(0, r);
+	r /= 3.0;
+	d += 50.0 * pow(sin(pos.x * macroFreqX * 0.1),2);
+	d = trickleHeigth * r;
 	float df = - progress * d;
 	vec2 newUV = vec2(pos.x, pos.y + df) * TEXTURE_PIXEL_SIZE;
 	vec4 color = texture(TEXTURE, UV);
