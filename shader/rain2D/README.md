@@ -10,6 +10,6 @@ float dropHeigth : Longueur des gouttes
 float dropWidth : Epaisseur des gouttes
 float intensity : intensité de la pluie/ Quantité de gouttes
 ```
-![preview]()
-![preview]()
-![preview]()
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/rain.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/snow.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/blood.gif)
