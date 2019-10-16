@@ -14,7 +14,7 @@ uniform float macroFreqX : hint_range(0, 1) = 1;
 
 
 
-vec4 findColor(float d, sampler2D texture_, vec2 pos, float pixelSize){
+vec4 findColor(float d, sampler2D texture_, vec2 pos, vec2 pixelSize){
 	float i = 0.0;
 	vec2 delta = vec2(0, 0);
 	float maxI = 0.0;
@@ -52,7 +52,7 @@ void fragment(){
 	color.a = 1.0;
 	vec4 trickleColor = texture(TEXTURE, newUV);
 	if (trickleColor.a <= 0.7){
-		vec4 topColor = findColor(-df, TEXTURE, pos, TEXTURE_PIXEL_SIZE.y);
+		vec4 topColor = findColor(-df, TEXTURE, pos, TEXTURE_PIXEL_SIZE);
 		if (useTextureForTrace)
 			COLOR = topColor;
 		else{
