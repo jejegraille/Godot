@@ -1,3 +1,18 @@
+## PREVIEW
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/rain.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/snow.gif)
+![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/blood.gif)
+
+## SETUP
+
+- créez un sprite avec une texture quelquonque.
+- Etirez le sprite sur toute la surface de l'ecrant.
+- Ajoutez le sprite en child d'un canvasLayer.
+- Ajoutez le shader au sprite
+- Synchronisez la position de votre camera au parametre "position" du shader
+
+## PARAMETRES
+
 ```
 vector2 position: à synchroniser sur la position de la camera pour que l'effet se déplace
 
@@ -10,6 +25,4 @@ float dropHeigth : Longueur des gouttes
 float dropWidth : Epaisseur des gouttes
 float intensity : intensité de la pluie/ Quantité de gouttes
 ```
-![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/rain.gif)
-![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/snow.gif)
-![preview](https://github.com/jejegraille/Godot/blob/master/shader/rain2D/blood.gif)
+
