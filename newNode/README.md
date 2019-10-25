@@ -1,1 +1,1 @@
-Contients des nodes nouveaux qui ajoute certaine fonctionnalité utile à Godot
+Contients des nodes nouveaux qui ajoutent certaine fonctionnalité utile à Godot
