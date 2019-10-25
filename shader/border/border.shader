@@ -1,8 +1,8 @@
 shader_type canvas_item;
 
-uniform float borderSize : hint_range(1,30) = 8.0;
+uniform float borderSize : hint_range(1,30) = 2.0;
 uniform vec4 color : hint_color = vec4(1,1,1,1);
-uniform int precision : hint_range(1,4) = 1; 
+uniform int precision : hint_range(1,4) = 2; 
 void fragment(){	
 	vec4 cCur = texture(TEXTURE,UV);
 	if (cCur.a < 0.2){		
