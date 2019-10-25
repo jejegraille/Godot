@@ -9,4 +9,4 @@ Développé pour faciliter l'affichage d'images depuis une url HTTP ou HTTPS
 
 signal onLoaded se déclanche quand l'image internet est affiché
 
-Afin d'accéllérer l'affichage des sprites les fois suivantes mais également d'éviter de retélecharger des données inutiles, les imageTexture généré sont mit en cache.
+Afin d'accéllérer l'affichage des sprites les fois suivantes mais également d'éviter de retélecharger des données inutiles, les imageTexture généré sont misent en cache.
