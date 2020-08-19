@@ -1,3 +1,5 @@
+Ce shader produit de multiple effet selon les paramètres recut en entrée, vous trouverez ci-dessous quelques effets ainsi que les paramètre à entrer pour obtenir l'effet.
+
 ## toon water
 ![preview](https://github.com/jejegraille/Godot/blob/master/shader/amazingFluide/preview/toonWater.gif)
 - PRESET : 
